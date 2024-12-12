@@ -1,0 +1,606 @@
+@import url("./fonts.sass")
+$text-color: #262633
+$grey-text: #797986
+$red-txt: #BF2738
+$btn-hover-color: #CC2A3C
+
+*,*:before,*:after
+  margin: 0
+  padding: 0
+  border: none
+  text-decoration: none
+  box-sizing: border-box
+
+body
+  font-family: "Golos"
+
+h1
+  font-family: "RoadRadio"
+  color: $text-color
+  font-size: 46px
+  line-height: 100%
+
+.head
+  display: flex
+  justify-content: space-between
+  margin: 0 auto
+  align-items: center
+  padding: 15px 29px
+  max-width: 1310px
+  &__menu
+    height: 12px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    cursor: pointer
+    &__hr
+      background-color: $text-color
+      height: 2px
+      transition: 0.3s
+      &__hr1
+        width: 32px
+      &__hr2
+        width: 17px
+    &:hover &__hr
+      background-color: $red-txt
+
+  &__nav
+    
+    display: flex
+    gap: 46px
+    flex-shrink: 0
+    &__a
+      color: $text-color
+      font-size: 15px
+      transition: 0.3s
+      flex-shrink: 0
+      &:hover
+        color: $red-txt
+
+
+  &__icon
+    display: flex
+    gap: 23px
+    &__img
+      fill: #C9C9CF
+      transition: 0.3s
+      &:hover
+        fill: #000
+
+  &__contact
+    display: flex
+    flex-direction: column
+    gap: 6px
+    &__tel
+      font-weight: 500
+      color: $text-color
+      font-size: 15px
+      transition: 0.3s
+      &:hover
+        color: $red-txt
+    &__mail
+      font-family: 'GraphikLCG'
+      font-size: 13px
+      color: $grey-text
+      transition: 0.3s
+      &:hover
+        color: $text-color
+
+  &__button
+    background-color: $red-txt
+    color: #FFF
+    border-radius: 14px
+    padding: 19px 28px
+    cursor: pointer
+    transition: 0.3s
+    &:hover
+      background-color: $btn-hover-color
+
+.title
+  background-color: #F5F5F5
+  display: flex
+  flex-direction: column
+  justify-content: center
+  padding: 21px 0
+  &__nav
+    display: flex
+    justify-content: center
+    gap: 15px
+    max-width: 1920px
+    &__main
+      color: $grey-text
+    &__curr
+      color: #C9C9CF
+  &__line
+    width: 100%
+    height: 1px
+    background-color: #D9D9D9
+    margin: 25px 0
+  &__txt
+    display: flex
+    justify-content: center
+
+.info
+  max-width: 1920px
+  margin: 0 auto
+  padding: 62px 29px 66px
+  display: flex
+  justify-content: center
+  gap: 53px
+  &__txt
+    &__tel
+      font-size: 36px
+      font-family: "RoadRadio"
+      color: $text-color
+      line-height: 120%
+    &__mail
+      color: $red-txt
+      font-size: 25px
+      padding-top: 6px
+    &__name
+      font-size: 17px
+      padding-top: 20px
+      color: $text-color
+      line-height: 110%
+      max-width: 600px
+      display: flex
+      flex-direction: column
+    &__address
+      font-size: 13px
+      line-height: 150%
+      padding-top: 15px
+      display: flex
+      flex-direction: column
+      gap: 25px
+      &__block
+        color: $grey-text
+  &__form
+    &__title
+      color: $text-color
+      font-family: "RoadRadio"
+      font-size: 36px
+      line-height: 110%
+    &__fields
+      width: 630px
+      &__cont
+        display: flex
+        justify-content: space-between
+        gap: 10px
+        padding-top: 20px
+      &__field
+        padding: 17px 20px 17px
+        background-color: #F5F5F5
+        border-radius: 14px
+        color: $text-color
+        width: 300px
+        font-size: 16px
+        font-family: "Golos"
+        &:hover
+          background-color: #fff
+          outline: 2px solid #F5F5F5
+        &:focus
+          background-color: #fff
+          outline: 2px solid #F5F5F5
+      &__mess
+        padding: 17px 20px
+        background-color: #F5F5F5
+        color: $text-color
+        margin-top: 28px
+        width: 100%
+        border-radius: 14px
+        resize: none
+        font-size: 16px
+        font-family: "Golos"
+        &:hover
+          background-color: #fff
+          outline: 2px solid #F5F5F5
+        &:focus
+          background-color: #fff
+          outline: 2px solid #F5F5F5
+      &__checkCont
+        display: flex
+        align-items: center
+        gap: 16px
+        padding-top: 20px
+      &__checkbox 
+        &:checked, &:not(:checked) 
+          position: absolute
+          left: -9999px
+        &:checked + label, &:not(:checked) + label
+          display: inline-block
+          position: relative
+          padding-left: 28px
+          line-height: 20px
+          cursor: pointer
+          color: $grey-text
+          font-size: 13px
+        &:checked + label:before, &:not(:checked) + label:before
+          content: ""
+          position: absolute
+          left: 0px
+          top: 0px
+          width: 18px
+          height: 18px
+          border-radius: 5px
+          z-index: 0
+        &:checked + label:after, &:not(:checked) + label:after
+          content: "✓"
+          position: absolute
+          left: 5px
+          bottom: 3px
+          width: 18px
+          height: 18px
+          border-radius: 5px
+          z-index: 1
+          color: #fff
+        &:not(:checked) + label:before 
+          background-color: #F5F5F5
+          transition: 0.3s
+        &:not(:checked) + label:hover:before
+          background-color: $red-txt
+        &:checked + label:before 
+          background-color: $red-txt
+        &:not(:checked) + label:after 
+          opacity: 0
+          transition: 0.3s
+        &:checked + label:after 
+          opacity: 1
+      &__label
+        &__link
+          color: $text-color
+
+      &__btn
+        background-color: $red-txt
+        font-family: "RoadRadio"
+        font-size: 14px
+        color: #FFF
+        padding: 19px 37px
+        border-radius: 14px
+        margin-top: 30px
+        transition: 0.3s
+        cursor: pointer
+        &:hover
+          background-color: $btn-hover-color
+        &:disabled
+          background-color: #EAEAEA
+          color: $grey-text
+
+.map
+  max-width: 1920px
+  margin: 0 auto
+  &__frame
+    width: 100%
+    height: 600px
+    filter: grayscale(0.8)
+    -webkit-filter: grayscale(0.8)
+    -moz-filter: grayscale(0.8)
+
+.cards
+  max-width: 1920px
+  margin: 0 auto
+  padding: 81px 29px 100px
+  &__cont
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    gap: 30px
+    max-width: 1320px
+    margin: 0 auto
+    &__card
+      padding: 33px 16px 40px 22px
+      background-color: #F5F5F5
+      width: 300px
+      height: 310px
+      color: $text-color
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      border-radius: 20px
+      &__big
+        width: 630px
+      &__title
+        font-size: 26px
+        font-family: "RoadRadio"
+      &__tel
+        font-size: 19px
+        padding-top: 15px
+        display: flex
+        flex-direction: column
+        gap: 5px
+        span 
+          white-space: nowrap
+      &__address
+        background-color: #F5F5F5
+        padding-top: 10px
+        font-size: 14px
+        color: $grey-text
+        display: flex
+        flex-direction: column
+        gap: 10px
+        line-height: 140%
+        &__link
+          color: $red-txt
+          transition: 0.3s
+          &:hover
+            color: $btn-hover-color
+      &__time
+        font-size: 14px
+        color: $text-color
+      
+.foot
+  background: linear-gradient(to right, #222225 50%, #2A2A2E 50%)
+  &__cont
+    display: flex
+    justify-content: space-between
+    max-width: 1290px
+    margin: 0 auto
+    padding: 63px 29px 43px
+    gap: 40px
+    &__under
+      padding: 20px 29px 27px
+  &__left
+    width: 520px
+    &__services
+      display: flex
+      flex-direction: column
+      gap: 20px
+      &__a
+        color: #fff
+        font-size: 24px
+        transition: 0.3s
+        &:hover
+          color: #F23147
+    &__nav
+      padding-top: 70px
+      display: flex
+      gap: 20px
+      row-gap: 15px
+      flex-wrap: wrap
+      max-width: 520px
+      &__a
+        color: $grey-text
+        transition: 0.3s
+        &:hover
+          color: #FFF
+    &__under
+      color: $grey-text
+      font-size: 13px
+      &__link
+        color: #C9C9CF
+        transition: 0.3s
+        &:hover
+          color: $red-txt
+  &__right
+    width: 520px
+    &__contact
+      display: flex
+      gap: 61px
+      &__tel
+        display: flex
+        flex-direction: column
+        gap: 20px
+        padding-top: 10px
+        &__a
+          color: #FFF
+          font-size: 30px
+          transition: 0.3s
+          &:hover
+            color: $red-txt
+      &__btn
+        border-radius: 14px
+        background-color: transparent
+        border: 2px solid #494950
+        padding: 19px 27px
+        color: #FFF
+        font-family: "RoadRadio"
+        cursor: pointer
+        transition: 0.3s
+        height: fit-content
+        &:hover
+          background-color: $red-txt
+          border: 2px solid $red-txt
+    &__mail
+      display: block
+      color: #F23147
+      font-size: 24px
+      padding-top: 20px
+    &__address
+      color: #fff
+      font-size: 16px
+      padding-top: 97px
+      line-height: 130%
+      font-family: 'GraphikLCG'
+      max-width: 450px
+    &__under
+      color: $grey-text
+      font-size: 13px
+  &__line
+    width: 100%
+    height: 1px
+    background-color: $grey-text
+
+@media screen and (max-width: 1100px)
+  h1
+    font-size: 40px
+
+  .head
+    &__nav
+      gap: 20px
+
+  .info
+    gap: 25px
+    &__txt
+      &__tel
+        font-size: 30px
+    &__form
+      &__title
+        font-size: 30px
+      &__fields
+        width: auto
+        &__cont
+          flex-direction: column
+        &__field
+          width: auto
+        &__mess
+          margin-top: 10px
+        &__label::after
+          left: 4px
+          top: 0
+          bottom: unset
+
+  .foot
+    &__left
+      width: 400px
+    &__right
+      width: 400px
+      &__contact
+        display: block
+        &__btn
+          margin-top: 20px
+      &__address
+        padding-top: 30px
+  
+@media screen and (max-width: 1000px)
+  .head
+    &__nav
+      &__a
+        &:last-child
+          display: none
+    &__button
+      display: none
+
+  .info
+    padding: 40px 29px 50px
+
+  .cards
+    padding: 60px 29px 80px
+    &__cont
+      gap: 10px
+      &__card
+        width: 350px
+        &__big
+          width: 710px
+  
+  .foot
+    &__cont
+      padding: 43px 29px 58px
+      &__under
+        padding:  20px 29px 28px 29px
+    &__left
+      width: 310px
+      &__services
+        &__a
+          font-size: 20px
+
+    &__right
+      width: 310px
+      &__contact
+        &__tel
+          &__a
+            font-size: 23px
+      &__mail
+        font-size: 19px 
+      &__address
+        max-width: 290px 
+
+@media screen and (max-width: 800px)
+  h1
+    font-size: 32px
+ 
+  .head
+    &__menu
+      &__hr
+        &__hr1
+          width: 24px
+        &__hr2
+          width: 12px
+    &__nav
+      &__a
+        font-size: 14px
+    &__svg
+      height: 40px
+
+  .info
+    gap: 25px
+    &__txt
+      &__tel
+        font-size: 28px
+      &__name
+        font-size: 14px
+        display: block
+      &__address
+        max-width: 287px
+    &__form
+      &__title
+        font-size: 28px
+
+  .title
+    padding: 16px 0
+    &__line
+      margin: 16px 0
+
+@media screen and (max-width: 767px)
+  .cards
+    &__cont
+      &__card
+        width: 49%
+        &__tel
+          gap: 5px
+        &__big
+          width: 100%
+
+@media screen and (max-width: 600px) 
+  .head
+    padding: 10px 16px 15px
+    &__nav
+      display: none
+    &__contact
+      display: none
+
+  .info
+    padding: 30px 14px 50px
+    flex-direction: column
+    gap: 50px
+
+  .cards
+    &__cont
+      &__card
+        width: 100%
+
+@media screen and (max-width: 480px) 
+  h1
+    font-size: 22px
+  
+  .title
+    padding-bottom: 20px
+    &__line
+      margin-bottom: 20px
+
+  .cards
+    padding: 30px 16px 60px
+
+  .foot
+    background: #222225
+    &__cont
+      flex-direction: column
+      padding: 0
+      align-items: center
+      gap: 0
+    &__left
+      padding: 40px 15px
+      width: 100%
+      &__under
+        background-color: #2A2A2E
+        padding: 19px 15px 10px
+      &__nav
+        padding-top: 15px
+    &__right
+      padding: 39px 15px 50px
+      width: 100%
+      background-color: #2A2A2E
+      &__mail
+        padding-top: 15px
+      &__address
+        padding-top: 40px
+      &__under
+        padding: 0 15px 28px
