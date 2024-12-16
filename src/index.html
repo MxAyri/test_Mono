@@ -4,6 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Testing task from Mono Digital</title>
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement":
+        [
+            {"@type": "ListItem",
+            "position": 1,
+            "item":
+                {"@id": "https://monodigital.ru/",
+                "name": "Главная"}
+            },
+            {"@type": "ListItem",
+            "position": 2,
+            "item":
+                {"@id": "https://monodigital.ru/contacts/",
+                "name": "Контакты"}
+            }
+        ]
+    }
+  </script>
 </head>
 <body>
   <header class="head">
@@ -45,9 +66,20 @@
   <main>
     <div class="title">
       <div class="title__nav">
-        <a class="title__nav__main" href="#">Главная</a>
-        <p class="title__nav__main">·</p>
-        <a href="#" class="title__nav__curr">Контакты</a>
+          <ul class="title__nav__breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li class="title__nav__breadcrumb__li" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a class="title__nav__breadcrumb__a" target="_blank" href="/" itemprop="item">
+                    <span itemprop="name">Главная</span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li class="title__nav__breadcrumb__li" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" >
+                <a class="title__nav__breadcrumb__a" target="_blank" href="#" itemprop="item" disabled>
+                    <span itemprop="name">Контакты</span>
+                </a>
+                <meta itemprop="position" content="2" />
+            </li>
+        </ul>
       </div>
       <hr class="title__line">
       <div class="title__txt">
@@ -56,8 +88,8 @@
     </div>
     <div class="info">
       <div class="info__txt">
-        <p class="info__txt__tel">8 (903) 467 98 51</p>
-        <p class="info__txt__mail">info@monevac.ru</p>
+        <a href="tel:89034679851" class="info__txt__tel">8 (903) 467 98 51</a>
+        <a href="mailto:info@monevac.ru" class="info__txt__mail">info@monevac.ru</a>
         <p class="info__txt__name">Полное наименование: <span>Общество с ограниченной ответственностью «МОНЕВАК» Сокращенное наименование: ООО «МОНЕВАК»</span></p>
         <div class="info__txt__address">
           <div class="info__txt__address__block">
@@ -111,7 +143,7 @@
             </p>
             <p class="cards__cont__card__address">
               115114, ул. Дербеневская, д. 1, стр. 1, подъезд 44, офис 6 (станция метро "Павелецкая")
-              <a class="cards__cont__card__address__link" href="#">Проложить маршрут</a>
+              <a class="cards__cont__card__address__link" href="https://yandex.ru/maps/-/CHESRG30">Проложить маршрут</a>
             </p>
           </div>
           <p  class="cards__cont__card__time">Режим работы: c 10:00 до 18:00</p>
@@ -126,7 +158,7 @@
             </p>
             <p class="cards__cont__card__address">
               400080, ул. Командира Рудь, 14А
-              <a class="cards__cont__card__address__link" href="#">Проложить маршрут</a>
+              <a class="cards__cont__card__address__link" href="https://yandex.ru/maps/-/CHEWaBpo">Проложить маршрут</a>
             </p>
           </div>
           <p  class="cards__cont__card__time">Режим работы: c 08:00 до 17:00</p>
@@ -141,7 +173,7 @@
             </p>
             <p class="cards__cont__card__address">
               350015, ул. Митрофана Седина, 176
-              <a class="cards__cont__card__address__link" href="#">Проложить маршрут</a>
+              <a class="cards__cont__card__address__link" href="https://yandex.ru/maps/-/CHEWaZph">Проложить маршрут</a>
             </p>
           </div>
           <p  class="cards__cont__card__time">Режим работы: c 08:00 до 17:00</p>
@@ -156,7 +188,7 @@
             </p>
             <p class="cards__cont__card__address">
               410080, пр-т Строителей, 1
-              <a class="cards__cont__card__address__link" href="#">Проложить маршрут</a>
+              <a class="cards__cont__card__address__link" href="https://yandex.ru/maps/-/CHEWaK82">Проложить маршрут</a>
             </p>
           </div>
           <p  class="cards__cont__card__time">Режим работы: c 08:00 до 18:00</p>
@@ -171,7 +203,7 @@
             </p>
             <p class="cards__cont__card__address">
               394030, ул. Комиссаржевской, 10
-              <a class="cards__cont__card__address__link" href="#">Проложить маршрут</a>
+              <a class="cards__cont__card__address__link" href="https://yandex.ru/maps/-/CHEWeUM2">Проложить маршрут</a>
             </p>
           </div>
           <p  class="cards__cont__card__time">Режим работы: c 08:00 до 18:00</p>
@@ -186,7 +218,7 @@
             </p>
             <p class="cards__cont__card__address">
               Район Аван 4, дом 2
-              <a class="cards__cont__card__address__link" href="#">Проложить маршрут</a>
+              <a class="cards__cont__card__address__link" href="https://yandex.ru/maps/-/CHEWa8~M">Проложить маршрут</a>
             </p>
           </div>
           <p  class="cards__cont__card__time">Режим работы: c 08:00 до 18:00</p>
@@ -201,7 +233,7 @@
             </p>
             <p class="cards__cont__card__address">
               630039, ул. Никитина 116, к.3
-              <a class="cards__cont__card__address__link" href="#">Проложить маршрут</a>
+              <a class="cards__cont__card__address__link" href="https://yandex.ru/maps/-/CHEWaPj6">Проложить маршрут</a>
             </p>
           </div>
           <p  class="cards__cont__card__time">Режим работы: c 08:00 до 18:00</p>
